@@ -1,5 +1,5 @@
 <template>
-  <form class="" action="#" method="post" v-on:submit.prevent="bookSubmit(bookTitle, bookAuthor)">
+  <form v-on:submit.prevent="bookSubmit(bookTitle, bookAuthor)" class="" action="#" method="post">
       <input v-model="bookTitle" type="text" name="title" value="" placeholder="Book Title">
       <input v-model="bookAuthor" type="text" name="author" value="" placeholder="Book Author">
       <button type="submit" name="button">Add Book</button>
@@ -20,7 +20,7 @@ export default {
   },
   methods:{
     bookSubmit(bookTitle, bookAuthor){
-      this.$emit('addbook', bookTitle, bookAuthor);
+      this.$emit('addbook', bookTitle, bookAuthor)
 }
   }
   };
